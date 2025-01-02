@@ -8,7 +8,7 @@ function Header(){
 <nav class="bg-white border-gray-200 dark:bg-gray-900">
   <div class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
   <a href="/" class="flex items-center space-x-3 rtl:space-x-reverse">
-      <img src="../src/Components/Images/shubhamwhite.png" class="h-8" alt="Shubham Logo" />
+      <img src="https://api.logo.com/api/v2/images?design=lg_GNaTuOgN43X7ALlX8z&format=webp&width=2000&grayscale=true&background=transparent&fit=contain&quality=100&u=53ff1ff44953df8d37ef26f427164be0e2f9a933d5450e09001f5d6549286f75" class="h-8" alt="Shubham Logo" />
       <span class="self-center text-2xl font-semibold whitespace-nowrap dark:text-white"></span>
   </a>
   <div class="flex md:order-2 space-x-3 md:space-x-0 rtl:space-x-reverse">
