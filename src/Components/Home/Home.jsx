@@ -75,7 +75,7 @@ function Home(){
 			>
 				<img 
 				className=' m-12 float-right overflow-x-scroll rounded-full'
-					src="https://media.licdn.com/dms/image/v2/D5603AQEQeqm1UYtjzw/profile-displayphoto-shrink_400_400/profile-displayphoto-shrink_400_400/0/1722875762539?e=1740614400&v=beta&t=YWoVqDKiFKTcHSWuznjSxBzqGmrTgwxmuRPsd2AiZc8"
+					src="https://media.licdn.com/dms/image/v2/D4D03AQFvaJ3xNENLHw/profile-displayphoto-shrink_400_400/B4DZRRPelPHIAk-/0/1736529803411?e=1741824000&v=beta&t=Z2LJUIWh_rqqrGf4Wt1EdPfUuR6XbkN5aBtG8Yo28_I"
 					alt="Developer"
 				/>
 			</motion.div>
