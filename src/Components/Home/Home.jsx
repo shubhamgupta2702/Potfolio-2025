@@ -1,12 +1,9 @@
 import React from "react";
-import useThemeSwitcher from '../Hooks/useThemeSwitcher.jsx';
 import { FiArrowDownCircle } from 'react-icons/fi';
-import developerLight from '../Images/developer.svg';
-import developerDark from '../Images/developer-dark.svg';
 import { motion } from 'framer-motion';
 import { BackgroundBlogCard } from "../Card/Card.jsx";
 import { NavLink } from "react-router-dom";
-import { HERO_SECTION } from "../Constants/Constants.js";
+import { HERO_SECTION, ProfilePic } from "../Constants/Constants.js";
 import {
 	Card,
 	CardHeader,
@@ -15,16 +12,20 @@ import {
 	Avatar,
 } from "@material-tailwind/react";
 import { FaDownload, FaFileDownload } from "react-icons/fa";
+import Technologies from "../Technologies/Technologies.jsx";
+import Projects from "../Projects/Projects.jsx";
 
 function Home(){
-    const [activeTheme] = useThemeSwitcher();
+    
     return(
         <>
         <motion.section
 			initial={{ opacity: 0 }}
 			animate={{ opacity: 1 }}
-			transition={{ ease: 'easeInOut', duration: 0.9, delay: 0.2 }}
-			className="w-full bg-gradient-to-r from-slate-900 to-gray-300 flex flex-col sm:justify-between items-center sm:flex-row "
+			hidden={{opacity:0, x: -100}}
+			visible= {{opacity: 1, x: 0}}
+			transition={{ ease: 'easeInOut', duration: 0.9, delay: 0.2, staggerChildren: 0.5 }}
+			className="w-full bg-gradient-to-r from-slate-950 to-gray-300 flex flex-col sm:justify-between items-center sm:flex-row "
 		>
 			<div className="w-full md:w-1/3 text-left">
 				<motion.h1
@@ -32,8 +33,8 @@ function Home(){
 					animate={{ opacity: 1 }}
 					transition={{
 						ease: 'easeInOut',
-						duration: 0.9,
-						delay: 0.1,
+						duration: 1,
+						delay: 1.0,
 					}}
 					className="ml-14 pb-2 text-4xl lg:text-8xl xl:text-4xl text-center sm:text-left text-ternary-dark dark:text-primary-light uppercase text-white tracking-tighter"
 				>
@@ -44,8 +45,8 @@ function Home(){
 					animate={{ opacity: 1 }}
 					transition={{
 						ease: 'easeInOut',
-						duration: 0.9,
-						delay: 0.2,
+						duration: 1,
+						delay: 1.1,
 					}}
 					className="bg-gradient-to-r from-stone-300 to-stone-600 bg-clip-text text-3xl tracking-tight text-transparent ml-16"
 				>
@@ -56,8 +57,8 @@ function Home(){
 				animate={{ opacity: 1 }}
 				transition={{
 					ease: 'easeInOut',
-					duration: 0.9,
-					delay: 0.2,
+					duration: 1.5,
+					delay: 1.2,
 				}}
 				className="my-2 ml-5 max-w-lg py-6 text-xl leading-relaxed tracking-tighter text-white"
 				>
@@ -69,8 +70,8 @@ function Home(){
 					animate={{ opacity: 1 }}
 					transition={{
 						ease: 'easeInOut',
-						duration: 0.9,
-						delay: 0.3,
+						duration: 1,
+						delay: 1.4,
 					}}
 					className="flex justify-center sm:block"
 				>
@@ -99,17 +100,20 @@ function Home(){
 			<motion.div
 				initial={{ opacity: 0, y: -180 }}
 				animate={{ opacity: 1, y: 0 }}
-				transition={{ ease: 'easeInOut', duration: 0.9, delay: 0.2 }}
+				transition={{ ease: 'easeInOut', duration: 0.9, delay: 1.2 }}
 				className="w-full sm:w-2/3 text-right float-right mt-8 sm:mt-0"
 			>
 				<img 
 				className='shadow-xl shadow-slate-900 m-12 mb-28 float-right overflow-x-scroll rounded-full'
-					src="https://media.licdn.com/dms/image/v2/D4D03AQFvaJ3xNENLHw/profile-displayphoto-shrink_400_400/B4DZRRPelPHIAk-/0/1736529803411?e=1741824000&v=beta&t=Z2LJUIWh_rqqrGf4Wt1EdPfUuR6XbkN5aBtG8Yo28_I"
+					src={ProfilePic}
 					alt="Developer"
 				/>
 			</motion.div>
 		
 		</motion.section>
+		<Technologies />
+		<Projects/>
+
 		
 		<h1 className='text-3xl p-9 font-bold text-center '>Projects</h1>
         <BackgroundBlogCard/>
